@@ -4,72 +4,63 @@
 -- tweet
 -- ---
 -- id int PK
--- text varchar
--- user varchar FK - user.id
--- time date
--- ticker varchar FK - ticker.id
--- mood varchar
--- likes int
--- rts int
+-- tweet varchar
+-- user_id int FK - user.user_id
+-- date date
+-- key_word varchar
+-- like varchar
+-- retweet int
 
 -- user
 -- ---
--- id int PK
--- name varchar
+-- user_id int PK
+-- user_name varchar
 -- verified BOOL
 -- location varchar
--- followings int
+-- friends int
 -- followers int
 
--- ticker
+-- sentiment
 -- ---
--- id int PK
--- name varchar
--- open DOUBLE 
--- close DOUBLE
-
-
-
+-- id int PK FK - tweet.id
+-- mood varchar
 
 CREATE TABLE "tweet" (
     "id" int   NOT NULL,
-    "text" varchar   NOT NULL,
-    "user" varchar   NOT NULL,
-    "time" date   NOT NULL,
-    "ticker" varchar   NOT NULL,
-    "mood" varchar   NOT NULL,
-    "likes" int   NOT NULL,
-    "rts" int   NOT NULL,
+    "tweet" varchar   NOT NULL,
+    "user_id" int   NOT NULL,
+    "date" date   NOT NULL,
+    "key_word" varchar   NOT NULL,
+    "like" varchar   NOT NULL,
+    "retweet" int   NOT NULL,
     CONSTRAINT "pk_tweet" PRIMARY KEY (
         "id"
      )
 );
 
 CREATE TABLE "user" (
-    "id" int   NOT NULL,
-    "name" varchar   NOT NULL,
+    "user_id" int   NOT NULL,
+    "user_name" varchar   NOT NULL,
     "verified" BOOL   NOT NULL,
     "location" varchar   NOT NULL,
-    "followings" int   NOT NULL,
+    "friends" int   NOT NULL,
     "followers" int   NOT NULL,
     CONSTRAINT "pk_user" PRIMARY KEY (
-        "id"
+        "user_id"
      )
 );
 
-CREATE TABLE "ticker" (
+CREATE TABLE "sentiment" (
     "id" int   NOT NULL,
-    "name" varchar   NOT NULL,
-    "open" DOUBLE   NOT NULL,
-    "close" DOUBLE   NOT NULL,
-    CONSTRAINT "pk_ticker" PRIMARY KEY (
+    "mood" varchar   NOT NULL,
+    CONSTRAINT "pk_sentiment" PRIMARY KEY (
         "id"
      )
 );
 
-ALTER TABLE "tweet" ADD CONSTRAINT "fk_tweet_user" FOREIGN KEY("user")
-REFERENCES "user" ("id");
+ALTER TABLE "tweet" ADD CONSTRAINT "fk_tweet_user_id" FOREIGN KEY("user_id")
+REFERENCES "user" ("user_id");
 
-ALTER TABLE "tweet" ADD CONSTRAINT "fk_tweet_ticker" FOREIGN KEY("ticker")
-REFERENCES "ticker" ("id");
+ALTER TABLE "sentiment" ADD CONSTRAINT "fk_sentiment_id" FOREIGN KEY("id")
+REFERENCES "tweet" ("id");
 
