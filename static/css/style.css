@@ -295,7 +295,8 @@ main .publicacion .header .datos {
 }
 
 main .publicacion .header .datos .nombre {
-    color: var(--blanco); 
+    color: var(--blanco);
+    font-size: 20px; 
 }
 
 main .publicacion .header .datos .hora {
@@ -315,6 +316,7 @@ main .publicacion .header .datos a:hover {
 main .publicacion .body p {
     margin-bottom: 10px;
     color: var(--blanco);
+    font-size: 20px;
 }
 
 main .publicacion .body img {
@@ -355,6 +357,20 @@ main .publicacion .botones button:hover {
 
 main .publicacion .botones button svg {
     margin-right: 5px;
+}
+
+main .publicacion .body .links {
+    text-decoration: underline;
+    color: var(--texto)
+}
+
+main .publicacion .body .descripcion {
+    font-size: 18px;
+}
+
+main .publicacion .body .comentario {
+    font-size: 18px;
+    color: var(--texto);
 }
 
 /* --------------- MEDIA QUERIES---------------- */
