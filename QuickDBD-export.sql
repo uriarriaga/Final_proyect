@@ -3,7 +3,7 @@
 
 -- tweet
 -- ---
--- id int PK
+-- id bigint PK
 -- tweet varchar
 -- user_id int FK - user.user_id
 -- date date
@@ -22,11 +22,11 @@
 
 -- sentiment
 -- ---
--- id int PK FK - tweet.id
+-- id bigint PK FK - tweet.id
 -- mood varchar
 
 CREATE TABLE "tweet" (
-    "id" int   NOT NULL,
+    "id" bigint   NOT NULL,
     "tweet" varchar   NOT NULL,
     "user_id" int   NOT NULL,
     "date" date   NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE "user" (
 );
 
 CREATE TABLE "sentiment" (
-    "id" int   NOT NULL,
+    "id" bigint   NOT NULL,
     "mood" varchar   NOT NULL,
     CONSTRAINT "pk_sentiment" PRIMARY KEY (
         "id"
