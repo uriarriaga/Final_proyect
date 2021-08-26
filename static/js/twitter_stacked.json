@@ -1,0 +1,44 @@
+[
+    {
+        "key_word": "Netflix",
+        "positive": 10000,
+        "negative": 5000,
+        "neutral": 1120
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "positive": 50000,
+        "negative": 1450,
+        "neutral": 6000
+    },
+    {
+        "key_word": "HBO Max",
+        "positive": 15000,
+        "negative": 1000,
+        "neutral": 3600
+    },
+    {
+        "key_word": "Paramount+",
+        "positive": 6000,
+        "negative": 1500,
+        "neutral": 9000
+    },
+    {
+        "key_word": "Blim",
+        "positive": 1900,
+        "negative": 8000,
+        "neutral": 5000
+    },
+    {
+        "key_word": "Star Plus",
+        "positive": 890,
+        "negative": 1500,
+        "neutral": 8900
+    },
+    {
+        "key_word": "Disney +",
+        "positive": 6000,
+        "negative": 1550,
+        "neutral": 4000
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "key_word": "Netflix",
+        "total_count": 700000
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "total_count": 300000
+    },
+    {
+        "key_word": "HBO Max",
+        "total_count": 100000
+    },
+    {
+        "key_word": "Paramount+",
+        "total_count": 50000
+    },
+    {
+        "key_word": "Blim",
+        "total_count": 350000
+    },
+    {
+        "key_word": "Star Plus",
+        "total_count": 10000
+    },
+    {
+        "key_word": "Disney +",
+        "total_count": 500000
+    }
+]

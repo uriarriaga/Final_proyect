@@ -1,0 +1,107 @@
+[
+    {
+        "key_word": "Netflix",
+        "nsat": 30,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "Netflix",
+        "nsat": 50,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "Netflix",
+        "nsat": 80,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 10,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 30,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 50,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 50,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 70,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 60,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 5,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 10,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 15,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 10,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 13,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 18,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 5,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 28,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 40,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 80,
+        "year":"Sat, 21 Aug 2001 00:00:00 GMT"
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 70,
+        "year":"Sat, 21 Aug 2005 00:00:00 GMT"
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 95,
+        "year":"Sat, 21 Aug 2010 00:00:00 GMT"
+    }
+]
