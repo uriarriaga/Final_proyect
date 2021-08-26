@@ -5,7 +5,7 @@ function tree_map(response) {
 
     data = [{
         type: "treemap",
-        labels: ["words", "positive", "neutral", "Negative"],
+        labels: ["words", "positive", "neutral", "negative"],
         parents: ["", "words", "words", "words"]
     }]
 
@@ -23,6 +23,7 @@ function tree_map(response) {
         data[0]['labels'].push(element.word);
         data[0]['parents'].push('negative');
     });
+    
     
 
     Plotly.newPlot('tree_map', data)
