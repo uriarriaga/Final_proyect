@@ -22,6 +22,11 @@ var trace1 = {
   var layout = {
     // title:'Line and Scatter Plot'
     showlegend: false,
+    xaxis: {
+      tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+      tick0: 0,
+      dtick: 1
+    },
     yaxis: {title: 'Tweet Count (bar)', showgrid: false },
     yaxis2: {
         title: 'NSAT (line)',
