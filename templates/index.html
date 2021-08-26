@@ -226,7 +226,7 @@
                         </div>
 
                         <div class="body">
-                            <p>What a week, huh?</p>
+                            <p>What a week, huh? #Bootcamp #Tec</p>
                             <img src="/static/img/final_project.jpg" alt="">
                         </div>
                         
@@ -338,7 +338,7 @@
                         </div>
 
                         <div class="body">
-                            <p>Logo</p>
+                            <p>We are the best Marketing Insights trough Machine Learning Agency!</p>
                             <img src="/static/img/Sentwiment.PNG" alt="">
                         </div>
                         
@@ -386,19 +386,19 @@
                             <p>ETL Process </p>
                             <p class="descripcion"><em>Extract</em></p>
                             <ol>
-                                <li>The main source was <a class= "links" href="https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets">Twitter API</a>. It requires a special access because is catalogued as sensitive information by Twitter</li>
-                                <li>The library used to download the information was <a class= "links" href="https://www.tweepy.org/">Tweepy</a></li>
+                                <li>The main source for our project is <a class= "links" href="https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets">Twitter API</a>. Using it requires special controlled accesses due to it's sensitive information</li>
+                                <li>The library used to download the information was <a class= "links" href="https://www.tweepy.org/">Tweepy</a></li>, which allows for easir manipulation of tweets.
                             </ol>
                             <p class="descripcion"><em>Transform</em></p>
                             <ol>
-                                <li>The tool used to clean data was <strong>Pandas</strong></li>
-                                <li>For the machine learning analyis, the model <strong>Sentimet Analyis Spanish</strong> was used. This <a class= "links" href="https://pypi.org/project/sentiment-analysis-spanish/">model</a> allows to analyze tweets in spanish</li>
+                                <li>We used <strong>Pandas</strong></li> to manipulate and clean data.
+                                <li>Then we performed machine learning analyis trough an existing model <strong>Sentimet Analyis Spanish</strong> was used. This <a class= "links" href="https://pypi.org/project/sentiment-analysis-spanish/">model</a>, which allows to analyze text in spanish</li>
                             </ol>
                             <p class="descripcion"><em>Load</em></p>
                             <ol>
-                                <li>The databases were storaged in <strong>Amazon Web Services</strong></li>
-                                <li>The data was imported into <strong>Postgres</strong>, as same as queries</li>
-                                <li>The queries were parsed using <strong>Flask and SQL Alchemy</strong>, then were used to deploy visualization in <strong>Plotly</strong></li>
+                                <li>The databases were stored in <strong>Amazon Web Services</strong></li>.
+                                <li>The data was imported into <strong>Postgres</strong>, and consulted trough queries</li>
+                                <li>The queries were parsed using <strong>Flask and SQL Alchemy</strong>, then were used to deploy visualizations in <strong>Plotly</strong></li>
                             </ol>
 
                         </div>
@@ -445,9 +445,8 @@
                         </div>
 
                         <div class="body">
-                            <p>MACHINE LEARNING</p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>Machine Learning Analysis</p>
+                            <p class="descripcion"><em> We decided to use an existing python library (sentiment-spanish) that uses convolutional neural networks to predict the sentiment of spanish sentences to analyze our tweets. This model was trained using over 800000 reviews of users from the pages: eltenedor, decathlon, tripadvisor, filmaffinity and ebay. The model was then trained using Keras and Tensorflow libraries. The model has a 88% validation accuracy over fresh data (not used for training).</p>
                             <img src="/static/img/machine.PNG" alt="">
                         </div>
                         
@@ -491,9 +490,9 @@
                         </div>
 
                         <div class="body">
-                            <p>Olimpics</p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>Sentwitment Metrics</p>
+                            <p class="descripcion">We used the results from the analysis to create a Net Satisfaction Score (NSAT) which summarizes the sentiment towards the service/product analyzed.
+                               In this example we can see the evolution trough time of the NSAT and the popularity gained by the Tokyo Olympic games as we approach the Opening Ceremony </p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="olimpiadas"></div>
                         
@@ -539,6 +538,7 @@
 
                         <div class="body">
                             <p>Streaming Services</p>
+                            <p class="descripcion">We performed a business case study using our Sentiment Model Analysis to provide examples on the business insights it can generate.  </p>
                             <img src="/static/img/Streaming_services.PNG" alt="">
                         </div>
                         
@@ -583,9 +583,8 @@
                         </div>
 
                         <div class="body">
-                            <p>Tweet Share </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>Tweet Share as a Popularity measure </p>
+                            <p class="descripcion"><em>Conclusion: </em> USing the amount of identified tweets over a period of time related to the keywords for each streaming service in Mexico we calculated a Popularity share.</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="tweet_share"></div>
                         
@@ -630,9 +629,8 @@
                         </div>
 
                         <div class="body">
-                            <p>Twitter Stacked </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>Sentiments towards each streaming platform </p>
+                            <p class="descripcion"><em>Conclusion: </em>Prior to calculating the NSAT score we graphed the user's sentiments towards each streaming platform. Paramount+ has the biggest amount of Positive sentiments (probably because it launche in March'21).</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="twitter_stacked"></div>
                         
@@ -677,9 +675,8 @@
                         </div>
 
                         <div class="body">
-                            <p>NSAT Net Satifaction Score </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>NSAT: Net Satifaction Score </p>
+                            <p class="descripcion"><em>Conclusion: </em>We agregate all sentiment information in one score, making it more easy to read and summarize sentiment in order to create more complex charts to detect trends.</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="nsat"></div>
                         
@@ -723,9 +720,8 @@
                         </div>
 
                         <div class="body">
-                            <p>NSAT Time </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>NSAT evolution trough time </p>
+                            <p class="descripcion"><em>Conclusion: </em>We see that the NSAT score tends to decrease over time. It is more normal for users to post negative comments. Amazon Prime Video has the highest satisfaction score in 2021.</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="time_nsat"></div>
                         
@@ -770,8 +766,7 @@
 
                         <div class="body">
                             <p>Most common words</p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p class="descripcion"><em>Conclusion: </em>Negative words are around specific movies/series and account related issues, while positive comments tend to be more on soon to be released products.</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="tree_map"></div>
                         
@@ -815,9 +810,8 @@
                         </div>
 
                         <div class="body">
-                            <p>PANDEMIC </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>Streming Services relevance over time </p>
+                            <p class="descripcion"><em>Conclusion: </em>The 2020 COVID19 pandemics had a strong impact on Streaming Services popularity probably related to lockdowns.</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="nsat2"></div>
                         
@@ -863,7 +857,7 @@
                         </div>
 
                         <div class="body">
-                            <p>Netflix mocks Televisa</p>
+                            <p>Netflix mocks Televisa 2016</p>
                             <img src="/static/img/RBD.PNG" alt="">
                         </div>
                         
@@ -908,8 +902,7 @@
 
                         <div class="body">
                             <p>BLIM vs NETFLIX </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p class="descripcion"><em>Conclusion: </em>Even when Twitter users evaluated Blim better than Netflix (NSAT score higher), NEtflix was the big winner of the whole battle with more hits (higher tweet share).</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="nsat3"></div>
                         
@@ -998,9 +991,8 @@
                         </div>
 
                         <div class="body">
-                            <p>DISNEY: Los Simpsons </p>
-                            <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
+                            <p>Disney launched in Nov 2017 but only with 2 Simpson Seasons</p>
+                            <p class="descripcion"><em>Conclusion: </em>Disney had huge tweeter share during the platform launch, however it was mostly filled with users complaining on a miss to include all the Simpson's seasons (driven by a previous agreement with TV AZTECA that removed this content from MX).</p>
                         </div>
                         <div class="chart d-flex justify-content-center" id="nsat4"></div>
                         
