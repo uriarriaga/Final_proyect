@@ -7,7 +7,7 @@ function time_nsat(response) {
                 response.filter(i => i.key_word === "Paramount").map(i => i.year),
                 response.filter(i => i.key_word === "Blim").map(i => i.year),
                 response.filter(i => i.key_word === "Disney").map(i => i.year)];
-    console.log(xData)
+    // console.log(xData)
 
     var yData = [response.filter(i => i.key_word === "Netflix").map(i => i.nsat),
                 response.filter(i => i.key_word === "AmazonPrime").map(i => i.nsat),
@@ -15,7 +15,7 @@ function time_nsat(response) {
                 response.filter(i => i.key_word === "Paramount").map(i => i.nsat),
                 response.filter(i => i.key_word === "Blim").map(i => i.nsat),
                 response.filter(i => i.key_word === "Disney").map(i => i.nsat)];
-    console.log(yData)
+    // console.log(yData)
 
     var colors = ['rgba(67,67,67,1)', 'rgba(115,115,115,1)', 'rgba(49,130,189, 1)',
         'rgba(189,189,189,1)', 'rgba(241,130,141,1)', 'rgba(243,156,18,1)'
@@ -24,7 +24,7 @@ function time_nsat(response) {
     var lineSize = [2, 2, 2, 2, 2, 2, 2];
 
     var labels = ["Netflix", "AmazonPrime", "HBO", "Paramount", "Blim", "Disney"];
-    console.log(labels)
+    // console.log(labels)
 
     var data = [];
 
@@ -34,26 +34,27 @@ function time_nsat(response) {
             y: yData[i],
             type: 'scatter',
             mode: 'lines',
+            name: labels[i],
             line: {
                 color: colors[i],
                 width: lineSize[i]
             }
         };
-        var result2 = {
-            x: [xData[i][0], xData[i][11]],
-            y: [yData[i][0], yData[i][11]],
-            type: 'scatter',
-            mode: 'markers',
-            marker: {
-                color: colors[i],
-                size: 12
-            }
-        };
-        data.push(result, result2);
+        // var result2 = {
+        //     x: [xData[i][0], xData[i][11]],
+        //     y: [yData[i][0], yData[i][11]],
+        //     type: 'scatter',
+        //     mode: 'markers',
+        //     marker: {
+        //         color: colors[i],
+        //         size: 12
+        //     }
+        // };
+        data.push(result);
     }
 
     var layout = {
-        showlegend: false,
+        showlegend: true,
         height: 600,
         width: 600,
         xaxis: {
@@ -67,6 +68,7 @@ function time_nsat(response) {
             tickcolor: 'rgb(204,204,204)',
             tickwidth: 2,
             ticklen: 5,
+            name: null,
             tickfont: {
                 family: 'Arial',
                 size: 12,
@@ -76,14 +78,14 @@ function time_nsat(response) {
         yaxis: {
             showgrid: false,
             zeroline: false,
-            showline: false,
-            showticklabels: false
+            showline: true,
+            showticklabels: true
         },
         autosize: false,
         margin: {
             autoexpand: false,
-            l: 100,
-            r: 20,
+            l: 50,
+            r: 150,
             t: 20
         },
         annotations: [
@@ -112,12 +114,13 @@ function time_nsat(response) {
             y: yData[i][0],
             xanchor: 'right',
             yanchor: 'middle',
-            text: labels[i],
+            text: null,
+            name: null,
             showarrow: false,
             font: {
                 family: 'Arial',
-                size: 16,
-                color: 'black'
+                size: 1,
+                color: 'white'
             }
         };
         // var result2 = {
@@ -135,7 +138,7 @@ function time_nsat(response) {
         //     showarrow: false
         // };
 
-        layout.annotations.push(result, result2);
+        layout.annotations.push(result);
     }
 
     Plotly.newPlot('time_nsat', data, layout);
