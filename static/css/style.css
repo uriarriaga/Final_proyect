@@ -373,6 +373,10 @@ main .publicacion .body .comentario {
     color: var(--texto);
 }
 
+/* main .pulicacion .body .chart {
+    display: flex;
+} */
+
 /* --------------- MEDIA QUERIES---------------- */
 
 /* Dispositivo MD */

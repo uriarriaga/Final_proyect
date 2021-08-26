@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Red Social</title>
 
@@ -384,11 +385,11 @@
                         </div>
 
                         <div class="body">
-                            <p>Average number of reviews by type of service </p>
+                            <p>Tweet Share </p>
                             <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
-                            <img src="/static/img/total_reviews.PNG" alt="">
                         </div>
+                        <div class="chart" id="tweet_share"></div>
                         
                         <div class="comentarios d-flex justify-content-between">
                             <div class="me-gusta d-flex justify-content-start align-items-center">
@@ -431,11 +432,11 @@
                         </div>
 
                         <div class="body">
-                            <p>Total number of iterations by type of service </p>
+                            <p>Twitter Stacked </p>
                             <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
-                            <img src="/static/img/total_iterations.PNG" alt="">
                         </div>
+                        <div class="chart" id="twitter_stacked"></div>
                         
                         <div class="comentarios d-flex justify-content-between">
                             <div class="me-gusta d-flex justify-content-start align-items-center">
@@ -478,11 +479,11 @@
                         </div>
 
                         <div class="body">
-                            <p>Monthly behavior by type of service </p>
+                            <p>NSAT Net Satifaction Score </p>
                             <p class="descripcion"><em>Conclusion: </em>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Optio laboriosam odit voluptatem culpa facilis, aperiam eligendi iure natus. Et, reprehenderit!</p>
-                            <img src="/static/img/monthly_behavior.PNG" alt="">
                         </div>
+                        <div class="chart" id="nsat"></div>
                         
                         <div class="comentarios d-flex justify-content-between">
                             <div class="me-gusta d-flex justify-content-start align-items-center">
@@ -606,6 +607,10 @@
         </div>
     </div>
 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="/static/js/tweet_share.js"></script>
+    <script src="/static/js/nsat.js"></script>
+    <script src="/static/js/twitter_stacked.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

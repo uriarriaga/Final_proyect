@@ -1,0 +1,30 @@
+[
+    {
+        "key_word": "Netflix",
+        "nsat": 0.9
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 0.8
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 0.5
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 0.3
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 0.1
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 0.2
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 0.9
+    }
+]
