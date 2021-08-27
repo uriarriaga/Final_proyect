@@ -1,0 +1,107 @@
+[
+    {
+        "key_word": "Netflix",
+        "nsat": 30,
+        "year":2001
+    },
+    {
+        "key_word": "Netflix",
+        "nsat": 50,
+        "year":2005
+    },
+    {
+        "key_word": "Netflix",
+        "nsat": 80,
+        "year":2010
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 10,
+        "year":2001
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 30,
+        "year":2005
+    },
+    {
+        "key_word": "Amazon Prime Video",
+        "nsat": 50,
+        "year":2010
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 50,
+        "year":2001
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 70,
+        "year":2005
+    },
+    {
+        "key_word": "HBO Max",
+        "nsat": 60,
+        "year":2010
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 5,
+        "year":2001
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 10,
+        "year":2005
+    },
+    {
+        "key_word": "Paramount+",
+        "nsat": 15,
+        "year":2010
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 10,
+        "year":2001
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 13,
+        "year":2005
+    },
+    {
+        "key_word": "Blim",
+        "nsat": 18,
+        "year":2010
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 19,
+        "year":2001
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 28,
+        "year":2005
+    },
+    {
+        "key_word": "Star Plus",
+        "nsat": 40,
+        "year":2010
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 80,
+        "year":2001
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 70,
+        "year":2005
+    },
+    {
+        "key_word": "Disney +",
+        "nsat": 95,
+        "year":2010
+    }
+]

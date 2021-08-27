@@ -34,4 +34,4 @@ function nsat(response) {
 
 };
 
-d3.json("/static/js/nsat.json").then(nsat);
+d3.json("/nsat.json").then(nsat);
