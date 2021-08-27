@@ -5,9 +5,15 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://root:9tckay8Bv^9e@database-2.cfzewqbxonfb.us-east-2.rds.amazonaws.com:5432/postgres'
 db = SQLAlchemy(app)
 db.reflect()
+
 class tweet(db.Model):
     __tablename__ = 'tweet'
-print(tweet.query.all())
+
+class sentiment(db.Model):
+    __tablename__ = 'sentiment'
+
+class user(db.Model):
+    __tablename__ = 'user'
 
 @app.route("/")
 def index():
