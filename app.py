@@ -70,21 +70,23 @@ GROUP BY  tweet.key_word'''
 
 # Time NSAT
 @app.route("/time_nsat")
-def nsat():
-    query = '''pending'''
+def time_nsat():
+    query = '''SELECT tweet.key_word, AVG ( sentiment.mood) ,tweet.date
+FROM tweet LEFT JOIN sentiment ON sentiment.id = tweet.id
+GROUP BY tweet.key_word , tweet.date'''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
         dict["key_word"] = i[0]
         dict["nsat"] = i[1]
-        dict["year"] = i[1]  # From the date?
+        dict["year"] = i[2]  # From the date?
         tweets.append(dict)
     return jsonify(tweets)
 
 # Tree Map
 @app.route("/tree_map")
-def nsat():
+def tree_map():
     query = '''pending'''
     response = db.session.execute(query).fetchall()
     tweets = []
