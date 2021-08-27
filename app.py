@@ -4,7 +4,10 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://root:9tckay8Bv^9e@database-2.cfzewqbxonfb.us-east-2.rds.amazonaws.com:5432/postgres'
 db = SQLAlchemy(app)
-db.Model.metadata.reflect(db.engine)
+db.reflect()
+class tweet(db.Model):
+    __tablename__ = 'tweet'
+print(tweet.query.all())
 
 @app.route("/")
 def index():
