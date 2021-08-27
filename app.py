@@ -20,6 +20,7 @@ db.reflect()
 def index():
     return render_template("index.html")
 
+# Tweet Share
 @app.route("/tweet_share")
 def tweet_share():
     response = db.session.execute(
@@ -32,6 +33,7 @@ def tweet_share():
         tweets.append(dict)
     return jsonify(tweets)
 
+# Twitter Stacked
 @app.route("/twitter_stacked")
 def twitter_stacked():
     query = '''SELECT tweet.key_word
@@ -51,6 +53,7 @@ GROUP BY  tweet.key_word'''
         tweets.append(dict)
     return jsonify(tweets)
 
+# NSAT
 @app.route("/nsat")
 def nsat():
     query = '''SELECT tweet.key_word, AVG( sentiment.mood)
@@ -65,12 +68,33 @@ GROUP BY  tweet.key_word'''
         tweets.append(dict)
     return jsonify(tweets)
 
-    '''all_records = db.session.execute(
-    "SELECT count(*), email FROM contact group by email"
-    " having count(*) > 1").fetchall()'''
+# Time NSAT
+@app.route("/time_nsat")
+def nsat():
+    query = '''pending'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[0]
+        dict["nsat"] = i[1]
+        dict["year"] = i[1]  # From the date?
+        tweets.append(dict)
+    return jsonify(tweets)
 
-    '''response = tweetdb.query(tweetdb.key_word,func.count(tweetdb.key_word)).group_by(tweetdb.key_word).all()'''
-    '''number = session.query(func.count(table.id).label('number').first().number'''
+# Tree Map
+@app.route("/tree_map")
+def nsat():
+    query = '''pending'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict[""] = i[0]
+        dict[""] = i[1]
+        dict[""] = i[1]
+        tweets.append(dict)
+    return jsonify(tweets)
 
 if __name__ == "__main__":
     app.run(debug=True)
