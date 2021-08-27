@@ -1,19 +1,20 @@
 from flask import Flask,render_template, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql.functions import func
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://root:9tckay8Bv^9e@database-2.cfzewqbxonfb.us-east-2.rds.amazonaws.com:5432/postgres'
 db = SQLAlchemy(app)
 db.reflect()
 
-class tweetdb(db.Model):
-    __tablename__ = 'tweet'
+# class tweetdb(db.Model):
+#     __tablename__ = 'tweet'
 
-class sentiment(db.Model):
-    __tablename__ = 'sentiment'
+# class sentiment(db.Model):
+#     __tablename__ = 'sentiment'
 
-class user(db.Model):
-    __tablename__ = 'user'
+# class user(db.Model):
+#     __tablename__ = 'user'
 
 @app.route("/")
 def index():
@@ -21,14 +22,55 @@ def index():
 
 @app.route("/tweet_share")
 def tweet_share():
-    response = tweetdb.query.all()
+    response = db.session.execute(
+            "SELECT tweet.key_word, count(tweet.key_word) FROM tweet GROUP BY tweet.key_word").fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["tweet"] = i.tweet
-        dict["key_word"] = i.key_word
+        dict["total_count"] = i[1]
+        dict["key_word"] = i[0]
         tweets.append(dict)
-    return jsonify(dict)
+    return jsonify(tweets)
+
+@app.route("/twitter_stacked")
+def twitter_stacked():
+    query = '''SELECT tweet.key_word
+, SUM(CASE WHEN sentiment.mood < 0.3 THEN 1 ELSE 0 END) AS Negative
+, SUM(CASE WHEN sentiment.mood > 0.7 THEN 1 ELSE 0 END) AS Positive
+, SUM(CASE WHEN sentiment.mood > 0.3 AND sentiment.mood < 0.7 THEN 1 ELSE 0 END) AS Neutral
+FROM tweet LEFT JOIN sentiment ON tweet.id = sentiment.id
+GROUP BY  tweet.key_word'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[0]
+        dict["positive"] = i[2]
+        dict["negative"] = i[1]
+        dict["neutral"] = i[3]
+        tweets.append(dict)
+    return jsonify(tweets)
+
+@app.route("/nsat")
+def nsat():
+    query = '''SELECT tweet.key_word, AVG( sentiment.mood)
+FROM tweet LEFT JOIN sentiment ON tweet.id = sentiment.id
+GROUP BY  tweet.key_word'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[0]
+        dict["nsat"] = i[1]
+        tweets.append(dict)
+    return jsonify(tweets)
+
+    '''all_records = db.session.execute(
+    "SELECT count(*), email FROM contact group by email"
+    " having count(*) > 1").fetchall()'''
+
+    '''response = tweetdb.query(tweetdb.key_word,func.count(tweetdb.key_word)).group_by(tweetdb.key_word).all()'''
+    '''number = session.query(func.count(table.id).label('number').first().number'''
 
 if __name__ == "__main__":
     app.run(debug=True)
