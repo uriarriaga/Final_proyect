@@ -22,4 +22,4 @@ function tweet_share(response) {
 
 };
 
-d3.json("/static/js/tweet_share.json").then(tweet_share);
+d3.json("/tweet_share").then(tweet_share);
