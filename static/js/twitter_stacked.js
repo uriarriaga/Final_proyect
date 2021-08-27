@@ -16,7 +16,7 @@ function twitter_stacked(response) {
         name: 'Positive',
         orientation: 'h',
         marker: {
-            color: 'rgba(55,128,191,0.6)',
+            color: 'rgba(11,156,49,0.6)',
             width: 1
         },
         type: 'bar'
@@ -29,7 +29,7 @@ function twitter_stacked(response) {
         orientation: 'h',
         type: 'bar',
         marker: {
-            color: 'rgba(255,153,51,0.6)',
+            color: 'rgba(255,0,0,0.6)',
             width: 1
         }
     };
@@ -41,7 +41,7 @@ function twitter_stacked(response) {
         orientation: 'h',
         type: 'bar',
         marker: {
-            color: 'rgba(55,120,88,0.6)',
+            color: 'rgba(255,231,32,0.6)',
             width: 1
         }
     };
