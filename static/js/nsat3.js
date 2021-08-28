@@ -39,7 +39,7 @@ function nsat3(response) {
             yaxis: 'y2',
             type: 'bar',
             name: labels[i],
-            bar: {
+            marker: {
                 color: colors[i]
             }
             // mode: 'markers',
