@@ -11,8 +11,8 @@ function twitter_stacked(response) {
     // console.log(response)
 
     var tracepositive = {
-        x: response.map(i => i.ppositive),
-        y: response.map(i => i.key_word),
+        x: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.ppositive),
+        y: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.key_word),
         name: 'Positive',
         orientation: 'h',
         marker: {
@@ -23,8 +23,8 @@ function twitter_stacked(response) {
     };
 
     var tracenegative = {
-        x: response.map(i => i.pnegative),
-        y: response.map(i => i.key_word),
+        x: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.pnegative),
+        y: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.key_word),
         name: 'Negative',
         orientation: 'h',
         type: 'bar',
@@ -35,8 +35,8 @@ function twitter_stacked(response) {
     };
 
     var traceneutral = {
-        x: response.map(i => i.pneutral),
-        y: response.map(i => i.key_word),
+        x: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.pneutral),
+        y: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.key_word),
         name: 'Neutral',
         orientation: 'h',
         type: 'bar',

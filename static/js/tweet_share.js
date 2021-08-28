@@ -4,8 +4,8 @@ function tweet_share(response) {
 
     var data = [{
         type: "pie",
-        values: response.map(i => i.total_count),
-        labels: response.map(i => i.key_word),
+        values: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.total_count),
+        labels: response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.key_word),
         textinfo: "label+percent",
         textposition: "outside",
         automargin: true

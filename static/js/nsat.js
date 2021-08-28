@@ -2,9 +2,9 @@ function nsat(response) {
     // console.log(response)
 
 
-    var xValue = response.map(i => i.key_word);
+    var xValue = response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.key_word);
 
-    var yValue = response.map(i => i.nsat);
+    var yValue = response.filter(i => i.key_word !== "OLIMPIADAS").map(i => i.nsat);
 
     var trace1 = {
         x: xValue,
@@ -26,7 +26,7 @@ function nsat(response) {
     var data = [trace1];
 
     var layout = {
-        title: 'NSAT Net Satisfaction Score',
+        title: null, 
         barmode: 'stack'
     };
 
@@ -34,4 +34,4 @@ function nsat(response) {
 
 };
 
-d3.json("/nsat.json").then(nsat);
+d3.json("/nsat").then(nsat);
