@@ -97,58 +97,79 @@ GROUP BY 1,2 ORDER BY 1 DESC'''
 # New NSAT 2
 @app.route("/nsat2")
 def nsat2():
-    query = ''''''
+    #PANDEMICS
+    query = '''
+SELECT
+TO_CHAR(tw.date,'YYYY')
+, ROUND(AVG(ss.mood)::numeric,2)
+, count(tw.id)
+FROM tweet tw
+LEFT JOIN sentiment ss on tw.id = ss.id
+GROUP BY 1 ORDER BY 1 DESC'''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[0]
-        dict["nsat"] = float(i[2])
-        dict["year"] = i[2]
+        dict["year"] = i[0]
+        dict["nsat"] = float(i[1])
+        dict["total_count"] = i[2]
         tweets.append(dict)
+    # print(tweets)
     return jsonify(tweets)
+
 
 # New NSAT 3
 @app.route("/nsat3")
 def nsat3():
-    query = ''''''
+    #blim vs Netflix
+    query = '''SELECT
+TO_CHAR(tw.date,'YYYY')
+, key_word
+, ROUND(AVG(ss.mood)::numeric,2)
+, count(tw.id)
+FROM tweet tw
+LEFT JOIN sentiment ss on tw.id = ss.id
+WHERE key_word IN ('Blim','Netflix')
+AND TO_CHAR(tw.date,'YYYY') IN ('2015','2016','2017') 
+GROUP BY 1,2 ORDER BY 1 DESC'''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[0]
+        dict["year"] = i[0]
+        dict["key_word"] = i[1]
         dict["nsat"] = float(i[2])
-        dict["year"] = i[2]
+        dict["total_count"] = i[3]
         tweets.append(dict)
+    # print(tweets)
     return jsonify(tweets)
+
 
 # New NSAT 4
 @app.route("/nsat4")
 def nsat4():
-    query = ''''''
+    query = '''SELECT
+TO_CHAR(tw.date,'YYYY')
+, key_word
+, ROUND(AVG(ss.mood)::numeric,2)
+, count(tw.id)
+FROM tweet tw
+LEFT JOIN sentiment ss on tw.id = ss.id
+WHERE key_word IN ('Disney')
+AND TO_CHAR(tw.date,'YYYY') IN ('2018','2019','2020','2021') 
+GROUP BY 1,2 ORDER BY 1 DESC'''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[0]
+        dict["month"] = i[0]
         dict["nsat"] = float(i[2])
-        dict["year"] = i[2]
+        dict["total_count"] = i[3]
         tweets.append(dict)
+    # print(tweets)
     return jsonify(tweets)
 
-# New NSAT 5
-@app.route("/nsat5")
-def nsat5():
-    query = ''''''
-    response = db.session.execute(query).fetchall()
-    tweets = []
-    for i in response:
-        dict = {}
-        dict["key_word"] = i[0]
-        dict["nsat"] = float(i[2])
-        dict["year"] = i[2]
-        tweets.append(dict)
-    return jsonify(tweets)
+
 
 # Tree Map
 @app.route("/tree_map")
