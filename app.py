@@ -69,18 +69,13 @@ GROUP BY 1'''
     for i in response:
         dict = {}
         dict["key_word"] = i[0]
-        dict["nsat"] = i[1]
+        dict["nsat"] = float(i[1])
         tweets.append(dict)
     return jsonify(tweets)
 
 # Time NSAT
 @app.route("/time_nsat")
 def time_nsat():
-<<<<<<< HEAD
-    query = '''SELECT tweet.key_word, CAST(AVG(sentiment.mood)AS FLOAT(2)) , TO_CHAR( tweet.date, 'YYYY-MM') 
-FROM tweet LEFT JOIN sentiment ON sentiment.id = tweet.id WHERE tweet.date >= '2021-01-01'
-GROUP BY tweet.key_word , tweet.date ORDER BY tweet.date DESC'''
-=======
     query = '''SELECT
 TO_CHAR(tw.date,'YYYY')
 , key_word
@@ -89,13 +84,12 @@ FROM tweet tw
 LEFT JOIN sentiment ss on tw.id = ss.id
 WHERE key_word NOT IN ('OLIMPIADAS')
 GROUP BY 1,2 ORDER BY 1 DESC'''
->>>>>>> a3ff3fc33f93934e79b0609ed22bc5d6cb382548
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
         dict["key_word"] = i[1]
-        dict["nsat"] = i[2]
+        dict["nsat"] = float(i[2])
         dict["year"] = i[0] 
         tweets.append(dict)
     return jsonify(tweets)
@@ -130,9 +124,10 @@ GROUP BY 1 ORDER BY 1 DESC'''
     for i in response:
         dict = {}
         dict["month"] = i[0]
-        dict["nsat"] = i[1]
+        dict["nsat"] = float(i[1])
         dict["total_count"] = i[2]
         tweets.append(dict)
+    # print(tweets)
     return jsonify(tweets)
 
 
