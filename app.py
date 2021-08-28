@@ -94,59 +94,59 @@ GROUP BY 1,2 ORDER BY 1 DESC'''
         tweets.append(dict)
     return jsonify(tweets)
 
-# Time NSAT 2
-@app.route("/time_nsat2")
-def time_nsat2():
-    query = '''pending'''
+# New NSAT 2
+@app.route("/nsat2")
+def nsat2():
+    query = ''''''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[1]
+        dict["key_word"] = i[0]
         dict["nsat"] = float(i[2])
-        dict["year"] = i[0] 
+        dict["year"] = i[2]
         tweets.append(dict)
     return jsonify(tweets)
 
-# Time NSAT 3
-@app.route("/time_nsat3")
-def time_nsat3():
-    query = '''pending'''
+# New NSAT 3
+@app.route("/nsat3")
+def nsat3():
+    query = ''''''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[1]
+        dict["key_word"] = i[0]
         dict["nsat"] = float(i[2])
-        dict["year"] = i[0] 
+        dict["year"] = i[2]
         tweets.append(dict)
     return jsonify(tweets)
 
-# Time NSAT 4
-@app.route("/time_nsat4")
-def time_nsat4():
-    query = '''pending'''
+# New NSAT 4
+@app.route("/nsat4")
+def nsat4():
+    query = ''''''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[1]
+        dict["key_word"] = i[0]
         dict["nsat"] = float(i[2])
-        dict["year"] = i[0] 
+        dict["year"] = i[2]
         tweets.append(dict)
     return jsonify(tweets)
 
-# Time NSAT 5
-@app.route("/time_nsat5")
-def time_nsat5():
-    query = '''pending'''
+# New NSAT 5
+@app.route("/nsat5")
+def nsat5():
+    query = ''''''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict["key_word"] = i[1]
+        dict["key_word"] = i[0]
         dict["nsat"] = float(i[2])
-        dict["year"] = i[0] 
+        dict["year"] = i[2]
         tweets.append(dict)
     return jsonify(tweets)
 
