@@ -76,11 +76,6 @@ GROUP BY 1'''
 # Time NSAT
 @app.route("/time_nsat")
 def time_nsat():
-<<<<<<< HEAD
-    query = '''SELECT tweet.key_word, CAST(AVG(sentiment.mood)AS FLOAT(2)) , TO_CHAR( tweet.date, 'YYYY-MM') 
-FROM tweet LEFT JOIN sentiment ON sentiment.id = tweet.id WHERE tweet.date >= '2021-01-01'
-GROUP BY tweet.key_word , tweet.date ORDER BY tweet.date DESC'''
-=======
     query = '''SELECT
 TO_CHAR(tw.date,'YYYY')
 , key_word
@@ -89,7 +84,6 @@ FROM tweet tw
 LEFT JOIN sentiment ss on tw.id = ss.id
 WHERE key_word NOT IN ('OLIMPIADAS')
 GROUP BY 1,2 ORDER BY 1 DESC'''
->>>>>>> a3ff3fc33f93934e79b0609ed22bc5d6cb382548
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
@@ -103,14 +97,14 @@ GROUP BY 1,2 ORDER BY 1 DESC'''
 # Tree Map
 @app.route("/tree_map")
 def tree_map():
-    query = '''pending'''
+    query = '''SELECT * from word'''
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
         dict = {}
-        dict[""] = i[0]
-        dict[""] = i[1]
-        dict[""] = i[1]
+        dict["word"] = i[1]
+        dict["count"] = i[2]
+        dict["mood"] = i[3]
         tweets.append(dict)
     return jsonify(tweets)
 
