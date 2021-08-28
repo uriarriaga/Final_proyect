@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Red Social</title>
 
 </head>
+
 
 <body>
     <header class="fixed-top">
@@ -268,20 +273,25 @@
                             <p>Project Summary</p>
                             <p class="descripcion"><em>Actual Situation: </em></p>
                                 <p class="comentario"> 
-                                    Currently, there are many sources in the market to make a meaningful data analysis. 
-                                    Certainly, Twitter is one of the most used & popular platforms to share feelings about any situation. 
-                                    With this in mind, the project tends to collect this information and bring interest analysis and conclusion to be useful for any industry 
-                                </p>
+                                    Companies around the world strugle to get users real feedback around their products and services.
+                                    Users will always complain when something is not working, but what are they excited about?
+                                    It is very rare for a consumer to contact Customer Service to congratulate a company around a service.
+                                    Customer Obsessed companies need to know the customers sentiment without the usual Customer Service filters.
+                                    Twitter is one of the most used & popular platforms worldwide to share feelings around any situation. 
+                                    With this in mind, Sentwitment uses machine learning to translate tweets into sentiment information from 
+                                    users towards any product or service and use data science to provide marketing insights to any industry.
+                                 </p>
                             <p class="descripcion"><em>Objective: </em></p>
                                 <p class="comentario"> 
-                                    Our goal is to apply data analysis through the use of Sentiment Analysis Models in Twitter to identify
-                                    trends and insights in the Mexican Streaming Market   
+                                    Our goal is to apply Sentiment Analysis Models to translate Twitter posts and identify
+                                    market trends and insights in the spanish speaking social media market.   
                                 </p>
                             <p class="descripcion"><em>Analysis: </em></p>  
                                 <p class="comentario"> 
-                                    From the identification of the main streaming services in the Mexican Market, 
-                                    the model collects tweets and classified them into positive, neutral, or negative. 
-                                    With the sorted information, the analysis consists in share through visualization the most valuable conclusions
+                                    It all starts with the appropiate keyword selection to filter and collect tweets.
+                                    Then, the model classifies them into positive, neutral, or negative. 
+                                    With the sorted information, we calculate a Net Satisfaction score (NSAT) which we use to plot 
+                                    the analysis and share valuable conclusions through visualization.
                                 </p>
                         </div>
                         
@@ -334,11 +344,11 @@
                             <p class="descripcion"><em>Transform</em></p>
                             <ol>
                                 <li>The tool used to clean data was <strong>Pandas</strong></li>
-                                <li>For the machine learning analyis, the model <strong>Sentiment Analysis Spanish</strong> was used. This <a class= "links" href="https://pypi.org/project/sentiment-analysis-spanish/">model</a> allows to analyze tweets in spanish</li>
+                                <li>For the machine learning analyis, the model used was <strong>ZZZ</strong>. This model allows to analyze tweets in spanish</li>
                             </ol>
                             <p class="descripcion"><em>Load</em></p>
                             <ol>
-                                <li>The databases were stroraged in <strong>Amazon Web Services</strong></li>
+                                <li>The databases were storaged in <strong>Amazon Web Services</strong></li>
                                 <li>The data was imported into <strong>Postgres</strong>, as same as queries</li>
                                 <li>The queries were parsed using <strong>Flask and SQL Alchemy</strong>, then were used to deploy visualization in <strong>Plotly</strong></li>
                             </ol>
