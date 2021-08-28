@@ -162,7 +162,7 @@ GROUP BY 1,2 ORDER BY 1 DESC'''
     tweets = []
     for i in response:
         dict = {}
-        dict["month"] = i[0]
+        dict["year"] = i[0]
         dict["nsat"] = float(i[2])
         dict["total_count"] = i[3]
         tweets.append(dict)
