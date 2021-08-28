@@ -69,7 +69,7 @@ GROUP BY 1'''
     for i in response:
         dict = {}
         dict["key_word"] = i[0]
-        dict["nsat"] = i[1]
+        dict["nsat"] = float(i[1])
         tweets.append(dict)
     return jsonify(tweets)
 
@@ -89,7 +89,7 @@ GROUP BY 1,2 ORDER BY 1 DESC'''
     for i in response:
         dict = {}
         dict["key_word"] = i[1]
-        dict["nsat"] = i[2]
+        dict["nsat"] = float(i[2])
         dict["year"] = i[0] 
         tweets.append(dict)
     return jsonify(tweets)
@@ -180,9 +180,10 @@ GROUP BY 1 ORDER BY 1 DESC'''
     for i in response:
         dict = {}
         dict["month"] = i[0]
-        dict["nsat"] = i[1]
+        dict["nsat"] = float(i[1])
         dict["total_count"] = i[2]
         tweets.append(dict)
+    # print(tweets)
     return jsonify(tweets)
 
 

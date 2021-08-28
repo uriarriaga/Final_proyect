@@ -1,9 +1,31 @@
+function tree_map(response) {
+    positive = response.filter(i => i.mood ==='+')
+    neutral = response.filter(i => i.mood ==='n')
+    negative = response.filter(i => i.mood ==='-')
 
+    data = [{
+        type: "treemap",
+        labels: ["words", "positive", "neutral", "negative"],
+        parents: ["", "words", "words", "words"]
+    }]
 
-data = [{
-    type: "treemap",
-    labels: ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
-    parents: ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve"]
-}]
+    positive.forEach(element => {
+        data[0]['labels'].push(element.word);
+        data[0]['parents'].push('positive');
+    });
 
-Plotly.newPlot('tree_map', data)
+    neutral.forEach(element => {
+        data[0]['labels'].push(element.word);
+        data[0]['parents'].push('neutral');
+    });
+
+    negative.forEach(element => {
+        data[0]['labels'].push(element.word);
+        data[0]['parents'].push('negative');
+    });
+    
+    
+
+    Plotly.newPlot('tree_map', data)
+};
+d3.json("/tree_map").then(tree_map);

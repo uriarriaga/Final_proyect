@@ -4,7 +4,7 @@ function olimpiadas(response) {
 var trace1 = {
     x: response.map(i => i.month),
     y: response.map(i => i.total_count),
-    name: 'yaxis data',
+    name: 'Tweets Count',
     yaxis: 'y1',
     type: 'bar'
   };
@@ -12,6 +12,7 @@ var trace1 = {
   var trace2 = {
     x: response.map(i => i.month),
     y: response.map(i => i.nsat),
+    name: 'NSAT',
     yaxis: 'y2',
     mode: 'lines'
   };
@@ -20,10 +21,12 @@ var trace1 = {
   
   var layout = {
     // title:'Line and Scatter Plot'
-    yaxis: {title: 'yaxis title'},
+    showlegend: false,
+    yaxis: {title: 'Tweet Count (bar)', showgrid: false},
     yaxis2: {
-        title: 'yaxis2 title',
+        title: 'NSAT (line)',
         overlaying: 'y',
+        range: [0, 0.5],
         side: 'right'}
   };
   
