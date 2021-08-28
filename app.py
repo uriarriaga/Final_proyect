@@ -108,5 +108,27 @@ def tree_map():
         tweets.append(dict)
     return jsonify(tweets)
 
+# Olimpiadas
+@app.route("/olimpiadas")
+def olimpiadas():
+    query = '''SELECT
+TO_CHAR(tw.date,'MM')
+, ROUND(AVG(ss.mood)::numeric,2) AS NSAT
+,COUNT(ss.id) AS total_count
+FROM tweet tw
+LEFT JOIN sentiment ss on tw.id = ss.id
+WHERE key_word = ('OLIMPIADAS') AND TO_CHAR(tw.date,'MM') NOT IN ('04') 
+GROUP BY 1 ORDER BY 1 DESC'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["month"] = i[0]
+        dict["nsat"] = i[1]
+        dict["total_count"] = i[2]
+        tweets.append(dict)
+    return jsonify(tweets)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
