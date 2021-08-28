@@ -73,7 +73,7 @@ GROUP BY 1'''
         tweets.append(dict)
     return jsonify(tweets)
 
-# Time NSAT
+# Time NSAT 1
 @app.route("/time_nsat")
 def time_nsat():
     query = '''SELECT
@@ -90,6 +90,62 @@ GROUP BY 1,2 ORDER BY 1 DESC'''
         dict = {}
         dict["key_word"] = i[1]
         dict["nsat"] = i[2]
+        dict["year"] = i[0] 
+        tweets.append(dict)
+    return jsonify(tweets)
+
+# Time NSAT 2
+@app.route("/time_nsat2")
+def time_nsat2():
+    query = '''pending'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[1]
+        dict["nsat"] = float(i[2])
+        dict["year"] = i[0] 
+        tweets.append(dict)
+    return jsonify(tweets)
+
+# Time NSAT 3
+@app.route("/time_nsat3")
+def time_nsat3():
+    query = '''pending'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[1]
+        dict["nsat"] = float(i[2])
+        dict["year"] = i[0] 
+        tweets.append(dict)
+    return jsonify(tweets)
+
+# Time NSAT 4
+@app.route("/time_nsat4")
+def time_nsat4():
+    query = '''pending'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[1]
+        dict["nsat"] = float(i[2])
+        dict["year"] = i[0] 
+        tweets.append(dict)
+    return jsonify(tweets)
+
+# Time NSAT 5
+@app.route("/time_nsat5")
+def time_nsat5():
+    query = '''pending'''
+    response = db.session.execute(query).fetchall()
+    tweets = []
+    for i in response:
+        dict = {}
+        dict["key_word"] = i[1]
+        dict["nsat"] = float(i[2])
         dict["year"] = i[0] 
         tweets.append(dict)
     return jsonify(tweets)
