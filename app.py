@@ -70,15 +70,10 @@ GROUP BY  tweet.key_word'''
 
 # Time NSAT
 @app.route("/time_nsat")
-<<<<<<< HEAD
 def time_nsat():
     query = '''SELECT tweet.key_word, CAST(AVG(sentiment.mood)AS FLOAT(2)) , TO_CHAR( tweet.date, 'YYYY-MM') 
 FROM tweet LEFT JOIN sentiment ON sentiment.id = tweet.id WHERE tweet.date >= '2021-01-01'
 GROUP BY tweet.key_word , tweet.date ORDER BY tweet.date DESC'''
-=======
-def nsat():
-    query = '''pending'''
->>>>>>> 3b541a650ec3f97c7529231a25f1ceaa2f52006b
     response = db.session.execute(query).fetchall()
     tweets = []
     for i in response:
@@ -91,7 +86,7 @@ def nsat():
 
 # Tree Map
 @app.route("/tree_map")
-def nsat():
+def tree_map():
     query = '''pending'''
     response = db.session.execute(query).fetchall()
     tweets = []

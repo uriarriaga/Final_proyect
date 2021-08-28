@@ -1,0 +1,17 @@
+[
+    {
+        "month": "05",
+        "total_count": 10,
+        "nsat": 0.2
+    },
+    {
+        "month": "06",
+        "total_count": 100,
+        "nsat": 0.4
+    },
+    {
+        "month": "07",
+        "total_count": 1000,
+        "nsat": 0.6
+    }
+]
