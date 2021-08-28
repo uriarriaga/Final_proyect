@@ -1,24 +1,22 @@
 function time_nsat(response) {
     // console.log(response)
 
-
-
-    var xData = response.filter(i => i.key_word === "Netflix").map(i => i.year);
-                response.filter(i => i.key_word === "Amazon Prime Video").map(i => i.year);
-                response.filter(i => i.key_word === "HBO Max").map(i => i.year);
-                response.filter(i => i.key_word === "Paramount+").map(i => i.year);
-                response.filter(i => i.key_word === "Blim").map(i => i.year);
-                response.filter(i => i.key_word === "Star Plus").map(i => i.year);
-                response.filter(i => i.key_word === "Disney +").map(i => i.year);
+    var xData = [response.filter(i => i.key_word === "Netflix").map(i => i.year),
+                response.filter(i => i.key_word === "Amazon Prime Video").map(i => i.year),
+                response.filter(i => i.key_word === "HBO Max").map(i => i.year),
+                response.filter(i => i.key_word === "Paramount+").map(i => i.year),
+                response.filter(i => i.key_word === "Blim").map(i => i.year),
+                response.filter(i => i.key_word === "Star Plus").map(i => i.year),
+                response.filter(i => i.key_word === "Disney +").map(i => i.year)];
     // console.log(xData)
 
-    var yData = response.filter(i => i.key_word === "Netflix").map(i => i.nsat);
-                response.filter(i => i.key_word === "Amazon Prime Video").map(i => i.nsat);
-                response.filter(i => i.key_word === "HBO Max").map(i => i.nsat);
-                response.filter(i => i.key_word === "Paramount+").map(i => i.nsat);
-                response.filter(i => i.key_word === "Blim").map(i => i.nsat);
-                response.filter(i => i.key_word === "Star Plus").map(i => i.nsat);
-                response.filter(i => i.key_word === "Disney +").map(i => i.nsat);
+    var yData = [response.filter(i => i.key_word === "Netflix").map(i => i.nsat),
+                response.filter(i => i.key_word === "Amazon Prime Video").map(i => i.nsat),
+                response.filter(i => i.key_word === "HBO Max").map(i => i.nsat),
+                response.filter(i => i.key_word === "Paramount+").map(i => i.nsat),
+                response.filter(i => i.key_word === "Blim").map(i => i.nsat),
+                response.filter(i => i.key_word === "Star Plus").map(i => i.nsat),
+                response.filter(i => i.key_word === "Disney +").map(i => i.nsat)];
     // console.log(yData)
 
     var colors = ['rgba(67,67,67,1)', 'rgba(115,115,115,1)', 'rgba(49,130,189, 1)',
@@ -27,7 +25,7 @@ function time_nsat(response) {
 
     var lineSize = [2, 2, 2, 2, 2, 2, 2];
 
-    var labels = [response.map(i => i.key_word)];
+    var labels = ["Netflix", "Amazon Prime Video", "HBO Max", "Paramount+", "Blim", "Star Plus", "Disney +"];
 
     var data = [];
 
@@ -86,25 +84,10 @@ function time_nsat(response) {
         margin: {
             autoexpand: false,
             l: 100,
-            r: 20,
-            t: 100
+            r: 100,
+            t: 20
         },
         annotations: [
-            {
-                xref: 'paper',
-                yref: 'paper',
-                x: 0.0,
-                y: 1.05,
-                xanchor: 'left',
-                yanchor: 'bottom',
-                text: 'Main Source for News',
-                font: {
-                    family: 'Arial',
-                    size: 30,
-                    color: 'rgb(37,37,37)'
-                },
-                showarrow: false
-            },
             {
                 xref: 'paper',
                 yref: 'paper',
@@ -112,7 +95,7 @@ function time_nsat(response) {
                 y: -0.1,
                 xanchor: 'center',
                 yanchor: 'top',
-                text: 'Source: Pew Research Center & Storytelling with data',
+                text: 'Source: Twitter API',
                 showarrow: false,
                 font: {
                     family: 'Arial',
