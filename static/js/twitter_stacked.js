@@ -8,7 +8,7 @@ function twitter_stacked(response) {
         element.pneutral = element.neutral/element.total
     });
     
-    console.log(response)
+    // console.log(response)
 
     var tracepositive = {
         x: response.map(i => i.ppositive),
@@ -49,7 +49,7 @@ function twitter_stacked(response) {
     var data = [tracepositive, traceneutral, tracenegative];
 
     var layout = {
-        title: 'Twitter Stacked',
+        title: null,
         barmode: 'stack'
     };
 
