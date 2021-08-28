@@ -22,7 +22,7 @@ var trace1 = {
   var layout = {
     // title:'Line and Scatter Plot'
     showlegend: false,
-    yaxis: {title: 'Tweet Count (bar)'},
+    yaxis: {title: 'Tweet Count (bar)', showgrid: false},
     yaxis2: {
         title: 'NSAT (line)',
         overlaying: 'y',
